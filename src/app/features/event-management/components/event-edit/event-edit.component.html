@@ -1,0 +1,12 @@
+<h4>Редактировать мероприятие</h4>
+
+@switch (event.type) {
+	@case ('sport') {
+		<app-sport-event-form (submitEvent)="save($event)" mode="edit" [event]="event"></app-sport-event-form>
+	}
+	@case ('music') {
+		<app-music-event-form (submitEvent)="save($event)" mode="edit" [event]="event"></app-music-event-form>
+	}
+}
+
+<button (click)="clickCancel()">Отмена</button>

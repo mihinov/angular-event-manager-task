@@ -1,0 +1,9 @@
+<app-base-event-form [form]="form"></app-base-event-form>
+<label>Участников: <input type="number" [formControl]="form.controls.participants"></label><br>
+<button [disabled]="form.invalid" (click)="save()">
+	@if (mode === 'create') {
+		Создать
+	} @else if (mode === 'edit') {
+		Сохранить
+	}
+</button>

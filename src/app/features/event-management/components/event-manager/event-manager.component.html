@@ -1,0 +1,17 @@
+@if (editingEvent(); as event) {
+  <app-event-edit
+    [event]="event"
+    (cancel)="cancelEdit()"
+		(submitEvent)="updateEvent()"
+	>
+  </app-event-edit>
+} @else {
+	<app-event-create (submitEvent)="addEvent($event)"></app-event-create>
+}
+
+<h2>Список мероприятий</h2>
+<app-event-table
+  [events]="events()"
+  (edit)="startEdit($event)"
+>
+</app-event-table>

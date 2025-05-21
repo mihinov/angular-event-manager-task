@@ -1,0 +1,5 @@
+.table {
+  border: 1px solid currentColor;
+	border-collapse: separate; /* обязательно! */
+  border-spacing: 15px; /* аналог cellspacing="10" */
+}

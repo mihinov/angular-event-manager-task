@@ -1,0 +1,14 @@
+<h4>Создать новое мероприятие</h4>
+<select [(ngModel)]="formType">
+  <option value="sport">Спортивное</option>
+  <option value="music">Музыкальное</option>
+</select>
+
+@switch (formType) {
+	@case ('sport') {
+		<app-sport-event-form (submitEvent)="save($event)" mode="create"></app-sport-event-form>
+	}
+	@case ('music') {
+		<app-music-event-form (submitEvent)="save($event)" mode="create"></app-music-event-form>
+	}
+}
